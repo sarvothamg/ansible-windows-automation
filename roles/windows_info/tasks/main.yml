@@ -53,3 +53,7 @@
 - name: Display Windows Version
   debug:
     msg: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
+
+- name: Display Fully Qualified Domain Name
+  debug:
+    msg: "{{ ansible_fqdn }}"
