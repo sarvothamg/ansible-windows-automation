@@ -90,7 +90,9 @@
   debug:
     msg: "{{ ansible_architecture }}"
 
-
+- name: Display Current User
+  debug:
+    msg: "{{ ansible_user_id }}"
 
 
 
