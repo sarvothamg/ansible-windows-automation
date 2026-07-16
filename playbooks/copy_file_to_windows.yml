@@ -1,0 +1,15 @@
+---
+- name: Copy File to Windows Server
+  hosts: windows
+  gather_facts: yes
+
+  tasks:
+
+    - name: Copy file to C drive
+      ansible.windows.win_copy:
+        src: files/sample.txt
+        dest: C:\Temp\sample.txt
+
+    - name: Display Result
+      debug:
+        msg: "File copied successfully."
