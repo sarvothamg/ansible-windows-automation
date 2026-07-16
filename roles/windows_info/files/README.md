@@ -1,1 +1,1 @@
-This folder stores static files used by the windows_info role.
+This is a static file used by the windows_info role.
