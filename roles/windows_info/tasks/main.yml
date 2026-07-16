@@ -73,3 +73,7 @@
 - name: Display CPU Count
   debug:
     msg: "{{ ansible_processor_vcpus }}"
+
+- name: Display BIOS Version
+  debug:
+    msg: "{{ ansible_bios_version }}"
