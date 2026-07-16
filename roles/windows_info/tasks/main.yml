@@ -31,3 +31,8 @@
   ansible.windows.win_copy:
     src: README.md
     dest: C:\Temp\Role_README.md
+
+- name: Create Logs Folder
+  ansible.windows.win_file:
+    path: C:\Training\Logs
+    state: directory
