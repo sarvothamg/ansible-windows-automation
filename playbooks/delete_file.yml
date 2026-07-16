@@ -1,0 +1,15 @@
+---
+- name: Delete File
+  hosts: windows
+  gather_facts: yes
+
+  tasks:
+
+    - name: Delete Sample File
+      ansible.windows.win_file:
+        path: C:\Temp\sample.txt
+        state: absent
+
+    - name: Display Result
+      debug:
+        msg: "File deleted successfully."
