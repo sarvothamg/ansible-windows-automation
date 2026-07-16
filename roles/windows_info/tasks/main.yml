@@ -81,3 +81,23 @@
 - name: Display Windows Domain
   debug:
     msg: "{{ ansible_domain }}"
+
+- name: Display System Uptime
+  debug:
+    msg: "{{ ansible_uptime_seconds }} seconds"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
