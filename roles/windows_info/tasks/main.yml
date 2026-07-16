@@ -66,3 +66,6 @@
   debug:
     msg: "{{ ansible_hostname }}"
 
+- name: Display Total Memory
+  debug:
+    msg: "{{ ansible_memtotal_mb }} MB"
