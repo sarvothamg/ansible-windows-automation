@@ -1,0 +1,15 @@
+---
+- name: Start Windows Service
+  hosts: windows
+  gather_facts: yes
+
+  tasks:
+
+    - name: Start Print Spooler Service
+      ansible.windows.win_service:
+        name: Spooler
+        state: started
+
+    - name: Display Result
+      debug:
+        msg: "Service started successfully."
