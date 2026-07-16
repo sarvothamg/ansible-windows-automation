@@ -86,7 +86,9 @@
   debug:
     msg: "{{ ansible_uptime_seconds }} seconds"
 
-
+- name: Display Windows Architecture
+  debug:
+    msg: "{{ ansible_architecture }}"
 
 
 
