@@ -21,3 +21,8 @@
   ansible.builtin.template:
     src: welcome.j2
     dest: C:\Temp\Welcome.txt
+    
+- name: Copy role README
+  ansible.windows.win_copy:
+    src: README.md
+    dest: C:\Temp\Role_README.md
