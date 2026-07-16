@@ -16,3 +16,8 @@
     content: "Windows information role executed successfully."
     dest: C:\Temp\windows_info_status.txt
   notify: Restart Windows Spooler
+
+- name: Copy welcome template
+  ansible.builtin.template:
+    src: welcome.j2
+    dest: C:\Temp\welcome.txt
