@@ -3,16 +3,5 @@
   hosts: windows
   gather_facts: yes
 
-  tasks:
-
-    - name: Display Hostname
-      debug:
-        msg: "Hostname: {{ ansible_hostname }}"
-
-    - name: Display Operating System
-      debug:
-        msg: "Operating System: {{ ansible_distribution }}"
-
-    - name: Display IP Address
-      debug:
-        msg: "IP Address: {{ ansible_ip_addresses }}"
+  roles:
+    - windows_info
