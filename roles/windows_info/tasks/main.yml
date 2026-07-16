@@ -10,3 +10,9 @@
 - name: Display IP Address
   debug:
     msg: "{{ ip_message }}: {{ ansible_ip_addresses }}"
+
+- name: Create Windows Info Marker File
+  ansible.windows.win_copy:
+    content: "Windows information role executed successfully."
+    dest: C:\Temp\windows_info_status.txt
+  notify: Restart Windows Spooler
