@@ -36,3 +36,9 @@
   ansible.windows.win_file:
     path: C:\Training\Logs
     state: directory
+
+- name: Create Temp Report
+  ansible.windows.win_copy:
+    content: "Ansible Training Completed"
+    dest: C:\Training\Logs\report.txt
+
