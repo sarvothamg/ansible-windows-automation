@@ -45,3 +45,7 @@
 - name: Display Completion Message
   debug:
     msg: "Windows Info role completed successfully."
+
+- name: Display Current Date and Time
+  debug:
+    msg: "{{ ansible_date_time.date }} {{ ansible_date_time.time }}"
