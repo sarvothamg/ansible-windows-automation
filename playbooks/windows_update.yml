@@ -1,0 +1,16 @@
+---
+- name: Install Windows Updates
+  hosts: windows
+  gather_facts: yes
+
+  tasks:
+
+    - name: Install Available Updates
+      ansible.windows.win_updates:
+        category_names:
+          - SecurityUpdates
+        reboot: yes
+
+    - name: Display Result
+      debug:
+        msg: "Windows updates installed."
