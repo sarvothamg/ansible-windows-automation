@@ -49,3 +49,7 @@
 - name: Display Current Date and Time
   debug:
     msg: "{{ ansible_date_time.date }} {{ ansible_date_time.time }}"
+
+- name: Display Windows Version
+  debug:
+    msg: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
