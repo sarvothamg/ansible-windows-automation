@@ -1,0 +1,20 @@
+---
+- name: Install Windows Features
+  hosts: windows
+  gather_facts: yes
+
+  tasks:
+
+    - name: Install IIS Web Server
+      ansible.windows.win_feature:
+        name: Web-Server
+        state: present
+
+    - name: Install .NET Framework 4.8
+      ansible.windows.win_feature:
+        name: NET-Framework-45-Core
+        state: present
+
+    - name: Display Installation Result
+      debug:
+        msg: "Windows Features Installed Successfully."
