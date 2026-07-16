@@ -94,7 +94,9 @@
   debug:
     msg: "{{ ansible_user_id }}"
 
-
+- name: Display Ansible Version
+  debug:
+    msg: "{{ ansible_version.full }}"
 
 
 
