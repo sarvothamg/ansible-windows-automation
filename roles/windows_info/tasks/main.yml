@@ -98,7 +98,9 @@
   debug:
     msg: "{{ ansible_version.full }}"
 
-
+- name: Display Playbook Completion
+  debug:
+    msg: "Windows information collection completed successfully."
 
 
 
