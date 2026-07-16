@@ -20,4 +20,4 @@
 - name: Copy welcome template
   ansible.builtin.template:
     src: welcome.j2
-    dest: C:\Temp\welcome.txt
+    dest: C:\Temp\Welcome.txt
