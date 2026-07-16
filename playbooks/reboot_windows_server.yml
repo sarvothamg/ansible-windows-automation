@@ -1,0 +1,13 @@
+---
+- name: Reboot Windows Server
+  hosts: windows
+  gather_facts: yes
+
+  tasks:
+
+    - name: Reboot Server
+      ansible.windows.win_reboot:
+
+    - name: Display Result
+      debug:
+        msg: "Server reboot completed."
