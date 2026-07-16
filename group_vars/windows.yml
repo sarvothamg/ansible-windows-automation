@@ -6,3 +6,5 @@ ansible_winrm_server_cert_validation: ignore
 
 ansible_user: administrator
 ansible_password: ChangeMe123!
+
+hostname_message: Windows Hostname
