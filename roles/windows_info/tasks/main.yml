@@ -57,3 +57,7 @@
 - name: Display Fully Qualified Domain Name
   debug:
     msg: "{{ ansible_fqdn }}"
+
+- name: Display IPv4 Address
+  debug:
+    msg: "{{ ansible_default_ipv4.address }}"
