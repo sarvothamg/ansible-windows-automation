@@ -77,3 +77,7 @@
 - name: Display BIOS Version
   debug:
     msg: "{{ ansible_bios_version }}"
+
+- name: Display Windows Domain
+  debug:
+    msg: "{{ ansible_domain }}"
