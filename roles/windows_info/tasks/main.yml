@@ -42,3 +42,6 @@
     content: "Ansible Training Completed"
     dest: C:\Training\Logs\report.txt
 
+- name: Display Completion Message
+  debug:
+    msg: "Windows Info role completed successfully."
