@@ -1,0 +1,5 @@
+---
+- name: Restart Windows Spooler
+  ansible.windows.win_service:
+    name: Spooler
+    state: restarted
