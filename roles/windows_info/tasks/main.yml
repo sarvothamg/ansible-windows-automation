@@ -26,3 +26,8 @@
   ansible.windows.win_copy:
     src: README.md
     dest: C:\Temp\Role_README.md
+
+- name: Copy role README
+  ansible.windows.win_copy:
+    src: README.md
+    dest: C:\Temp\Role_README.md
