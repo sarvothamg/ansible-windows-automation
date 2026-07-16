@@ -1,0 +1,4 @@
+---
+hostname_message: "Hostname"
+os_message: "Operating System"
+ip_message: "IP Address"
