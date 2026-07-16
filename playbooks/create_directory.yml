@@ -1,0 +1,15 @@
+---
+- name: Create Directory
+  hosts: windows
+  gather_facts: yes
+
+  tasks:
+
+    - name: Create Temp Directory
+      ansible.windows.win_file:
+        path: C:\Temp
+        state: directory
+
+    - name: Display Result
+      debug:
+        msg: "Directory created successfully."
