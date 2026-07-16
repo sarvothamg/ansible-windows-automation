@@ -1,12 +1,12 @@
 ---
-- name: Display Windows Hostname
+- name: Display Hostname
   debug:
-    var: ansible_hostname
+    msg: "{{ hostname_message }}: {{ ansible_hostname }}"
 
 - name: Display Operating System
   debug:
-    var: ansible_distribution
+    msg: "{{ os_message }}: {{ ansible_distribution }}"
 
 - name: Display IP Address
   debug:
-    var: ansible_ip_addresses
+    msg: "{{ ip_message }}: {{ ansible_ip_addresses }}"
