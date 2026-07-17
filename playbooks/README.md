@@ -1,12 +1,22 @@
 # Playbooks
 
-This folder contains Ansible playbooks for Windows Server administration.
+This directory contains standalone Ansible playbooks for common Windows Server administration tasks.
 
-## Planned Playbooks
+## Included Playbooks
 
 - Collect Windows Server Information
-- Install Windows Features
-- Restart Windows Services
+- Copy Files to Windows Servers
+- Create Directories
 - Create Local Users
-- Windows Update Automation
-- IIS Installation
+- Delete Files
+- Install Windows Features
+- Manage Windows Services
+- Restart Windows Services
+- Reboot Windows Servers
+- Install Windows Updates
+
+## Requirements
+
+- Ansible
+- WinRM
+- Windows Server
