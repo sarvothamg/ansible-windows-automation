@@ -5,11 +5,15 @@
 
 - name: Display Operating System
   debug:
-    msg: "{{ os_message }}: {{ ansible_distribution }}"
+    msg: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
 
 - name: Display IP Address
   debug:
-    msg: "{{ ip_message }}: {{ ansible_ip_addresses }}"
+    msg: "{{ ansible_default_ipv4.address }}"
+
+- name: Display Current Date and Time
+  debug:
+    msg: "{{ ansible_date_time.date }} {{ ansible_date_time.time }}"
 
 - name: Create Windows Info Marker File
   ansible.windows.win_copy:
@@ -17,17 +21,12 @@
     dest: C:\Temp\windows_info_status.txt
   notify: Restart Windows Spooler
 
-- name: Copy welcome template
+- name: Copy Welcome Template
   ansible.builtin.template:
     src: welcome.j2
     dest: C:\Temp\Welcome.txt
-    
-- name: Copy role README
-  ansible.windows.win_copy:
-    src: README.md
-    dest: C:\Temp\Role_README.md
 
-- name: Copy role README
+- name: Copy Role README
   ansible.windows.win_copy:
     src: README.md
     dest: C:\Temp\Role_README.md
@@ -37,75 +36,11 @@
     path: C:\Training\Logs
     state: directory
 
-- name: Create Temp Report
+- name: Create Report File
   ansible.windows.win_copy:
-    content: "Ansible Training Completed"
+    content: "Ansible Windows Information Collection Completed Successfully."
     dest: C:\Training\Logs\report.txt
 
 - name: Display Completion Message
   debug:
-    msg: "Windows Info role completed successfully."
-
-- name: Display Current Date and Time
-  debug:
-    msg: "{{ ansible_date_time.date }} {{ ansible_date_time.time }}"
-
-- name: Display Windows Version
-  debug:
-    msg: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
-
-- name: Display Fully Qualified Domain Name
-  debug:
-    msg: "{{ ansible_fqdn }}"
-
-- name: Display IPv4 Address
-  debug:
-    msg: "{{ ansible_default_ipv4.address }}"
-
-- name: Display Windows Hostname
-  debug:
-    msg: "{{ ansible_hostname }}"
-
-- name: Display Total Memory
-  debug:
-    msg: "{{ ansible_memtotal_mb }} MB"
-
-- name: Display CPU Count
-  debug:
-    msg: "{{ ansible_processor_vcpus }}"
-
-- name: Display BIOS Version
-  debug:
-    msg: "{{ ansible_bios_version }}"
-
-- name: Display Windows Domain
-  debug:
-    msg: "{{ ansible_domain }}"
-
-- name: Display System Uptime
-  debug:
-    msg: "{{ ansible_uptime_seconds }} seconds"
-
-- name: Display Windows Architecture
-  debug:
-    msg: "{{ ansible_architecture }}"
-
-- name: Display Current User
-  debug:
-    msg: "{{ ansible_user_id }}"
-
-- name: Display Ansible Version
-  debug:
-    msg: "{{ ansible_version.full }}"
-
-- name: Display Playbook Completion
-  debug:
     msg: "Windows information collection completed successfully."
-
-
-
-
-
-
-
-
